@@ -5,6 +5,28 @@
 *
   -webkit-font-smoothing: antialiased
 
+@keyframes fadeBg 
+  0% 
+    background-color: white
+  100% 
+    background-color: black
+
+@keyframes fadeIn 
+  0% 
+    opacity: 0
+  100% 
+    opacity: 1
+
+@keyframes fadeInMove 
+  0% 
+    opacity: 0
+    transform: translateY(-50px)
+  100% 
+    opacity: 1
+    transform: translateY(0px)
+  
+
+
 .heroWrap
   height: 100%
   width: 100%
@@ -13,12 +35,15 @@
   display: flex
 
 .hero 
-  background-color: #4a4a4a
+  background-color: white
   display: flex
   width: 100%
   flex-direction: column
   justify-content: center
   align-items: center
+  animation: fadeBg 2s ease-in-out 0.5s 1 forwards
+
+
 
 h1, h2 
   color: white
@@ -29,6 +54,9 @@ h1, h2
 h1
   font-size: 3em !important
 
+  opacity: 0
+  animation: fadeInMove 1s ease-in-out 2s 1 forwards
+
 h3
   font-family: sans-serif
   color: white
@@ -36,12 +64,18 @@ h3
   letter-spacing: 5px
   text-transform: uppercase
 
+  opacity: 0
+  animation: fadeIn 2s ease-in-out 3s 1 forwards
+
 p 
   color: white
   max-width: 600px
   text-align: center
   font-family: sans-serif
   line-height: 1.5em
+
+  opacity: 0
+  animation: fadeIn 2s ease-in-out 4s 1 forwards
 
   a 
     color: inherit
