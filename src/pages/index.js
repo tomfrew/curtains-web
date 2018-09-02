@@ -10,7 +10,7 @@ export default class IndexPage extends React.Component {
     return (
       <div className="pa3 heroWrap">
         <div className="hero">
-          <h1>Curtain Resoration Company</h1>
+          <h1>Curtain Restoration Company</h1>
           <h3>Comming soon</h3>
           <p>We're currently working on a brand new site and will be back soon but in the meantime please get in touch directly at <a href="mailto:hello@curtainrestorationcompany.com">hello@curtainrestorationcompany.com</a></p>
         </div>
