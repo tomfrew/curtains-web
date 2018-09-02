@@ -8,12 +8,23 @@ export default class IndexPage extends React.Component {
     const { data } = this.props
     const { edges: posts } = data.allMarkdownRemark
 
+    console.log( this.props)
+
     return (
       <div>
         <section className="hero">
           Cat
         </section>
-        <Services name="Test" />
+        <Services 
+          location={this.props.location}
+          name="Test" 
+        />
+
+        <Link className="has-text-primary" to={{
+          search: '?service',
+        }}>
+            Link me
+          </Link>
         <section>
         <div className="container">
           <div className="content">
