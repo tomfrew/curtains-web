@@ -6,7 +6,6 @@ import Services from '../components/Services';
 export default class IndexPage extends React.Component {
   render() {
     const { data } = this.props
-    const { edges: posts } = data.allMarkdownRemark
 
     return (
       <div className="pa3 heroWrap">
@@ -15,6 +14,7 @@ export default class IndexPage extends React.Component {
           <h3>Comming soon</h3>
           <p>We're currently working on a brand new site and will be back soon but in the meantime please get in touch directly at <a href="mailto:hello@curtainrestorationcompany.com">hello@curtainrestorationcompany.com</a></p>
         </div>
+
       </div>
     )
   }
