@@ -9,42 +9,12 @@ export default class IndexPage extends React.Component {
     const { edges: posts } = data.allMarkdownRemark
 
     return (
-      <div>
-        <section className="hero">
-          Cat
-        </section>
-        <Services name="Test" />
-        <section>
-        <div className="container">
-          <div className="content">
-            <h1 className="has-text-weight-bold is-size-2">Latest Stories</h1>
-          </div>
-          {posts
-            .map(({ node: post }) => (
-              <div
-                className="content"
-                style={{ border: '1px solid #eaecee', padding: '2em 4em' }}
-                key={post.id}
-              >
-                <p>
-                  <Link className="has-text-primary" to={post.fields.slug}>
-                    {post.frontmatter.title}
-                  </Link>
-                  <span> &bull; </span>
-                  <small>{post.frontmatter.date}</small>
-                </p>
-                <p>
-                  {post.excerpt}
-                  <br />
-                  <br />
-                  <Link className="button is-small" to={post.fields.slug}>
-                    Keep Reading →
-                  </Link>
-                </p>
-              </div>
-            ))}
+      <div className="pa3 heroWrap">
+        <div className="hero">
+          <h1>Curtain Resoration Company</h1>
+          <h3>Comming soon</h3>
+          <p>We're currently working on a brand new site and will be back soon but in the meantime please get in touch directly at <a href="mailto:hello@curtainrestorationcompany.com">hello@curtainrestorationcompany.com</a></p>
         </div>
-      </section>
       </div>
     )
   }
